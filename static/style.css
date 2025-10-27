@@ -1,0 +1,177 @@
+/* define global variables */
+:root {
+  --pixel-size: 0.3em;
+}
+
+p.code {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    color: #FFF;
+    font-style: normal;
+    white-space: break-spaces;
+    margin-top: 0;
+    padding: 1em;
+}
+.shell-window {
+    background-color: #322a2d;
+}
+
+header {
+    width: fit-content;
+}
+
+nav {
+    margin-top: calc(var(--pixel-size) * 5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+    height: 100%;
+    padding-left: calc(var(--pixel-size) * 2);
+    padding-right: calc(var(--pixel-size) * 1);
+    
+
+    background-color: #4f546a;
+}
+
+/* nav media queries */
+
+/* mobile portrait size */
+/* NOTE: ONLY MAKE MEDIA QUERIES APPLY WHEN THE ASCII ART IS FUCKED UP */
+@media only screen and (max-width: 479px) {
+}
+
+/* mobile landscape size*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+
+.window {
+    width: fit-content;
+
+    .window-top-bar {
+        display: flex;
+        flex-direction: row;
+        height: calc(var(--pixel-size) * 7);
+
+        .window-title {
+            border-image: url(windowbar9slice.png);
+            image-rendering: pixelated;
+            border-image-slice: 3 1 3 1 fill;
+            border-image-width: calc(var(--pixel-size) * 3) calc(var(--pixel-size) * 1);
+            min-width: 50vw;
+
+            .window-title-text {
+                /* TODO set a roughly pixel-accurate size */
+                font-family: "Tiny5";
+                font-size: calc(var(--pixel-size) * 6.2);
+                margin-top: 0;
+                margin-left: calc(var(--pixel-size) * 1);
+
+
+            }
+        }
+        .window-buttons {
+            height: 100%;
+            width: calc(var(--pixel-size) * 24);
+            
+            background-image: url(windowbuttons.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            image-rendering: pixelated;
+        }
+    }
+
+    .window-bottom {
+        border-image: url(window9slice.png);
+        image-rendering: pixelated;
+        border-image-slice: 12 10 15 4;
+        border-image-width: calc(var(--pixel-size) * 12) calc(var(--pixel-size) * 10) calc(var(--pixel-size) * 15) calc(var(--pixel-size) * 4);
+        max-width: calc(50vw + var(--pixel-size) * 10);
+        padding-top: 0;
+        padding-right: calc(var(--pixel-size) * 10);
+        padding-bottom: 3px;
+        padding-left: calc(var(--pixel-size) * 4);
+    }
+}
+
+.navbutton {
+    .button {
+        image-rendering: pixelated;
+        width: fit-content;
+        height: fit-content;
+        min-width: 5em;
+        min-height: 5em;
+        padding: calc(var(--pixel-size) * 1) calc(var(--pixel-size) * 3) calc(var(--pixel-size) * 8) calc(var(--pixel-size) * 3);
+
+
+        div {
+            background: transparent;
+            cursor: pointer;
+            border: none;
+            background-repeat: no-repeat;
+            background-size: contain;
+            image-rendering: pixelated;
+            margin: calc(var(--pixel-size) * 2);
+
+            display: flex;
+            justify-self: center;
+        }
+
+        div.icon-work {
+            width: calc(var(--pixel-size) * 21);
+            height: calc(var(--pixel-size) * 16);
+            background-image: url(icon_work.png);
+        }
+
+        div.icon-school {
+            width: calc(var(--pixel-size) * 19);
+            height: calc(var(--pixel-size) * 19);
+            background-image: url(icon_school.png);
+            top: calc(var(--pixel-size) * 6) !important;
+        }
+
+        div.icon-skills {
+            width: calc(var(--pixel-size) * 14);
+            height: calc(var(--pixel-size) * 20);
+            background-image: url(icon_skills.png);
+        }
+
+        div.icon-projects {
+            width: calc(var(--pixel-size) * 21);
+            height: calc(var(--pixel-size) * 19);
+            background-image: url(icon_projects.png);
+        }
+
+        div.icon-links {
+            width: calc(var(--pixel-size) * 18);
+            height: calc(var(--pixel-size) * 18);
+            background-image: url(icon_links.png);
+        }
+
+    }
+    .button.unpressed {
+        border-image: url(unpressed9slice.png);
+        border-image-slice: 7 7 9 8 fill;
+        border-image-width: calc(var(--pixel-size) * 7) calc(var(--pixel-size) * 7) calc(var(--pixel-size) * 9) calc(var(--pixel-size) * 8);
+
+        div {
+            filter: invert();
+        }
+    }
+    .button.pressed {
+        border-image: url(pressed9slice.png);
+        border-image-slice: 7 7 9 8 fill;
+        border-image-width: calc(var(--pixel-size) * 7) calc(var(--pixel-size) * 7) calc(var(--pixel-size) * 9) calc(var(--pixel-size) * 8);
+        
+        div {
+            position: relative;
+            top: calc(var(--pixel-size) * 4);
+        }
+    }
+}
