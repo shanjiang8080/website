@@ -1,16 +1,33 @@
 function buttonToggle(e) {
+    const animateWindow = document.getElementById(e.dataset.for);
 
     // toggle the button
     if (e.classList.contains("pressed")) {
         e.classList.remove("pressed");
         e.classList.add("unpressed");
+
+        if (animateWindow.classList.contains("slideIn")) {
+            animateWindow.classList.remove("slideIn");
+        }
+        animateWindow.classList.add("slideOut");
+
     }
     else if (e.classList.contains("unpressed")) {
         e.classList.remove("unpressed");
         e.classList.add("pressed");
+
+        if (animateWindow.classList.contains("slideOut")) {
+            animateWindow.classList.remove("slideOut");
+        }
+        animateWindow.classList.add("slideIn");
+
     }
 
     // trigger the toggle logic
+    // tween the window in
+    console.log(animateWindow.classList);
+
+
 }
 
 // set onclick to toggle pressing/unpressing of things for all nav buttons

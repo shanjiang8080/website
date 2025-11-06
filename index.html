@@ -2,8 +2,9 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Tiny5&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" type="image/x-icon" href="static/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hey, it's Shan Jiang's website!</title>
@@ -12,7 +13,7 @@
 <!-- header contains both basic info and buttons -->
     <header>
         <!-- some basic info about me, placed in a fake terminal window -->
-        <div class="window">
+        <section class="window">
             <!-- has a title component and a buttons component, buttons is decorative for now -->
             <div class="window-top-bar">
                 <div class="window-title">
@@ -24,49 +25,50 @@
             </div>
             <div class="window-bottom">
                 <div class="shell-window">
-                <p class="code">
-    _____ __   Welcome to...       ___                  
+                <p class="code top">Welcome to...</p>
+                <p class="code" id="title-art">
+    _____ __                       ___                  
    / ___// /_  ____ _____         / (_)___ _____  ____ _
    \__ \/ __ \/ __ `/ __ \   __  / / / __ `/ __ \/ __ `/
   ___/ / / / / /_/ / / / /  / /_/ / / /_/ / / / / /_/ / 's
  /____/_/ /_/\__,_/_/ /_/   \____/_/\__,_/_/ /_/\__, /  
      website!                     (Shan Jiang) /____/   
                 </p>
-                <p class="code" id="fake-input">guest $ █</p>
+                <p class="code bottom" id="fake-input">guest $ █</p>
                 </div>
                 <!-- should have monospace font, ascii art of my name -->
             </div>
-        </div>
+        </section>
 
     </header>    
     <!-- the buttons that will spawn windows about what i have done -->
     <nav>
         <div class="navbutton">
-            <div class="button unpressed">
+            <div class="button unpressed" data-for="work">
                 <div class="icon-work">
                 </div>
             </div>
         </div>
         <div class="navbutton">
-            <div class="button unpressed">
+            <div class="button unpressed" data-for="school">
                 <div class="icon-school">
                 </div>
             </div>
         </div>
         <div class="navbutton">
-            <div class="button unpressed">
+            <div class="button unpressed" data-for="skills">
                 <div class="icon-skills">
                 </div>
             </div>
         </div>
         <div class="navbutton">
-            <div class="button unpressed">
+            <div class="button unpressed" data-for="projects">
                 <div class="icon-projects">
                 </div>
             </div>
         </div>
         <div class="navbutton">
-            <div class="button unpressed">
+            <div class="button unpressed" data-for="links">
                 <div class="icon-links">
                 </div>
             </div>
@@ -74,7 +76,124 @@
 
     </nav>
 
+    <main>
+        <article class="window" id="work">
+            <!-- has a title component and a buttons component, buttons is decorative for now -->
+            <div class="window-top-bar">
+                <div class="window-title">
+                    <h4 class="window-title-text">Work</h4>
+                </div>
+                <div class="window-buttons">
+                    <!-- empty but has min size, background image due to CSS, will have 3 buttons -->
+                </div>
+            </div>
+            <div class="window-bottom">
+                <div class="window-inner">
+                    <div id="work-experience">
+                        <div class="column-container">
+                            <div>
+                                <h2>DataAnnotation</h2>
+                                <h3>AI Training Freelancer</h3>
+                                <h5>May-August 2025</h5>
+                            </div>
+                            <img class="img-fullres" src="static/work_da.webp" alt="DataAnnotation logo" height="130px">
+                        </div>
+                        <p>At this position, I was responsible for evaluating and improving the results of AI models performing programming tasks across a wide variety of languages and frameworks.
+                            For some examples, I was tasked to evaluate outputs on Unity projects in C#, Flask and pygame projects in Python, React applications, and Java projects. 
+                            While projects were varied, some tasks involved evaluating code diffs, comparing and contrasting AI models, examining agentic AI output, and dockerizing and creating unit tests for codebases that AI models would attempt to fulfill prompts adhering to.
+                        </p>
+                        <hr />
+                        <div class="column-container">
+                            <div>
+                                <h2>BEST-CA INC</h2>
+                                <h3>Automation Developer</h3>
+                                <h5>May-August 2024</h5>
+                            </div>
+                            <img class="img-fullres" src="static/work_bca.png" alt="BEST CA logo" height="50px">
+                        </div>
 
+                        <p>
+                            Under this position, I was responsible for developing and implementing automated solutions for posting and renewing Kijiji ads with Selenium in Python.
+                            As a result of my work, I was responsible for rending out 5 rooms and several parking spaces.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="window" id="school">
+            <!-- has a title component and a buttons component, buttons is decorative for now -->
+            <div class="window-top-bar">
+                <div class="window-title">
+                    <h4 class="window-title-text">School</h4>
+                </div>
+                <div class="window-buttons">
+                    <!-- empty but has min size, background image due to CSS, will have 3 buttons -->
+                </div>
+            </div>
+            <div class="window-bottom">
+                <div class="window-inner">
+                    <div id="school-history">
+                        <h2>University of Toronto Mississauga</h2>
+                        <h3>Computer Science Major - Statistics Minor - Game Studies Minor</h3>
+                        <p>I am currently a third year at the University of Toronto Mississauga.
+                            My CGPA is currently 3.8.
+                            I'm studying Computer Science as my major subject, while taking minors in Statistics and Game Studies. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="window" id="skills">
+            <!-- has a title component and a buttons component, buttons is decorative for now -->
+            <div class="window-top-bar">
+                <div class="window-title">
+                    <h4 class="window-title-text">Skills</h4>
+                </div>
+                <div class="window-buttons">
+                    <!-- empty but has min size, background image due to CSS, will have 3 buttons -->
+                </div>
+            </div>
+            <div class="window-bottom">
+                <div class="window-inner">
+                    <p>I know 1+ thing.</p>
+                </div>
+            </div>
+        </article>
+        <article class="window" id="projects">
+            <!-- has a title component and a buttons component, buttons is decorative for now -->
+            <div class="window-top-bar">
+                <div class="window-title">
+                    <h4 class="window-title-text">Projects</h4>
+                </div>
+                <div class="window-buttons">
+                    <!-- empty but has min size, background image due to CSS, will have 3 buttons -->
+                </div>
+            </div>
+            <div class="window-bottom">
+                <div class="window-inner">
+                    <p>I've done some pretty neat things, I'd think?</p>
+                </div>
+            </div>
+        </article>
+        <article class="window" id="links">
+            <!-- has a title component and a buttons component, buttons is decorative for now -->
+            <div class="window-top-bar">
+                <div class="window-title">
+                    <h4 class="window-title-text">Links</h4>
+                </div>
+                <div class="window-buttons">
+                    <!-- empty but has min size, background image due to CSS, will have 3 buttons -->
+                </div>
+            </div>
+            <div class="window-bottom">
+                <div class="window-inner">
+                    <p>Link to my github and or my linkedIn. Not my website though!</p>
+                </div>
+            </div>
+        </article>
+
+    </main>
     <script src="static/script.js"></script>
 </body>
 </html>

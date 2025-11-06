@@ -3,6 +3,56 @@
   --pixel-size: 0.3em;
 }
 
+@font-face {
+  font-family: minimum; /* set name */
+  src: url(minimum.ttf); /* url of the font */
+}
+
+
+p {
+    margin-top: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h2 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+h3 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+h4 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+h5 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.img-fullres {
+    image-rendering: auto;
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
 p.code {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
@@ -10,10 +60,27 @@ p.code {
     font-style: normal;
     white-space: break-spaces;
     margin-top: 0;
+    margin-bottom: 1em;
     padding: 1em;
 }
 .shell-window {
     background-color: #322a2d;
+}
+
+.code.top {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.code.bottom {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#title-art {
+    font-size: min(1em, calc(80vw / 60));
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 header {
@@ -42,17 +109,83 @@ nav {
 /* nav media queries */
 
 /* mobile portrait size */
-/* NOTE: ONLY MAKE MEDIA QUERIES APPLY WHEN THE ASCII ART IS FUCKED UP */
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 600px) {
+    nav {
+        display: none;
+    }
+    .column-container {
+        flex-direction: column-reverse;
+    }
 }
 
 /* mobile landscape size*/
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+}
+
+/* keyframes for tweening and stuff */
+@keyframes slideIn {
+    from {
+        transform: translateX(-90vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-90vw);
+    }
+}
+
+.slideIn {
+    transform: translateX(-90vw);
+    animation: slideIn 0.5s forwards;
+}
+
+.slideOut {
+    transform: translateX(0);
+    animation: slideOut 1s forwards;
 }
 
 
+/* for each window */
+
+#work {
+    left: 4em;
+}
+
+
+#school {
+    left: 2em;
+}
+
+#skills {
+    left: 3em;
+}
+
+#projects {
+    left: 5em;
+}
+
+#links {
+    left: 1em;
+}
+
+.window-inner {
+    padding: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
 .window {
     width: fit-content;
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
 
     .window-top-bar {
         display: flex;
@@ -68,9 +201,9 @@ nav {
 
             .window-title-text {
                 /* TODO set a roughly pixel-accurate size */
-                font-family: "Tiny5";
-                font-size: calc(var(--pixel-size) * 6.2);
-                margin-top: 0;
+                font-family: "minimum";
+                font-size: calc(var(--pixel-size) * 10);
+                margin-top: -0.35em;
                 margin-left: calc(var(--pixel-size) * 1);
 
 
@@ -92,7 +225,10 @@ nav {
         image-rendering: pixelated;
         border-image-slice: 12 10 15 4;
         border-image-width: calc(var(--pixel-size) * 12) calc(var(--pixel-size) * 10) calc(var(--pixel-size) * 15) calc(var(--pixel-size) * 4);
+
         max-width: calc(50vw + var(--pixel-size) * 10);
+        min-height: calc(var(--pixel-size) * 28);
+
         padding-top: 0;
         padding-right: calc(var(--pixel-size) * 10);
         padding-bottom: 3px;
