@@ -44,31 +44,31 @@
     <!-- the buttons that will spawn windows about what i have done -->
     <nav>
         <div class="navbutton">
-            <div class="button unpressed" data-for="work">
+            <div class="button unpressed" data-for="work" id="button_work">
                 <div class="icon-work">
                 </div>
             </div>
         </div>
         <div class="navbutton">
-            <div class="button unpressed" data-for="school">
+            <div class="button unpressed" data-for="school" id="button_school">
                 <div class="icon-school">
                 </div>
             </div>
         </div>
         <div class="navbutton">
-            <div class="button unpressed" data-for="skills">
+            <div class="button unpressed" data-for="skills" id="button_skills">
                 <div class="icon-skills">
                 </div>
             </div>
         </div>
         <div class="navbutton">
-            <div class="button unpressed" data-for="projects">
+            <div class="button unpressed" data-for="projects" id="button_projects">
                 <div class="icon-projects">
                 </div>
             </div>
         </div>
         <div class="navbutton">
-            <div class="button unpressed" data-for="links">
+            <div class="button unpressed" data-for="links" id="button_links">
                 <div class="icon-links">
                 </div>
             </div>
@@ -136,9 +136,9 @@
                     <div id="school-history">
                         <h2>University of Toronto Mississauga</h2>
                         <h3>Computer Science Major - Statistics Minor - Game Studies Minor</h3>
-                        <p>I am currently a third year at the University of Toronto Mississauga.
+                        <p>I am currently a third year Computer Science major at the University of Toronto Mississauga.
                             My CGPA is currently 3.8.
-                            I'm studying Computer Science as my major subject, while taking minors in Statistics and Game Studies. 
+                            While I have CS as my major subject, I'm also taking minors in Statistics and Game Studies. 
                         </p>
                     </div>
                 </div>
@@ -156,7 +156,53 @@
             </div>
             <div class="window-bottom">
                 <div class="window-inner">
-                    <p>I know 1+ thing.</p>
+                    <div id="skills-con">
+                        <p>
+                            I've learned a lot of useful things through school, work, and my hobbies.
+                        </p>
+
+                        <h2>Tech-related Skills</h2>
+                        <ul class="tag-list">
+                            <li>Java</li>
+                            <li>C#</li>
+                            <li>Python</li>
+                            <li>Kotlin</li>
+                            <li>C</li>
+                            <li>JavaScript</li>
+                            <li>Haskell</li>
+                            <li>R</li>
+                            <li>Git</li>
+                            <li>SQL</li>
+                            <li>HTML/CSS</li>
+                            <li>Unity</li>
+                            <li>Django</li>
+                            <li>Selenium</li>
+                            <li>Jetpack Compose</li>
+                            <li>Docker</li>
+                            <li>Self-Hosting</li>
+                            <li>Nginx</li>
+                            <li>Django</li>
+                            <li>Web Dev</li>
+                            <li>App Dev</li>
+                            <li>Full Stack Dev</li>                            
+                        </ul>
+                        <h2>Soft Skills</h2>
+                        <ul class="tag-list">
+                            <li>AGILE Dev</li>
+                            <li>Scrum</li>
+                            <li>Collaboration</li>
+                            <li>Responsibility</li>
+                            <li>Initiative</li>
+                            <li>Adaptiveness</li>
+                        </ul>
+                        <h2>Other Skills</h2>
+                        <ul class="tag-list">
+                            <li>Animation</li>
+                            <li>Pixel Art</li>
+                            <li>Graphic Design</li>
+                            <li>Video Editing</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </article>
@@ -172,7 +218,74 @@
             </div>
             <div class="window-bottom">
                 <div class="window-inner">
-                    <p>I've done some pretty neat things, I'd think?</p>
+                    <section id="projects-con">
+                        <!--Talk about anchor game here!!!-->
+                        <header class="project-icon-holder">
+                            <a href="#projects_Anchor"><img src="static/projects/anchor.png"></a>
+                            <a href="#projects_Collectalogger"><img src="static/projects/Collectalogger.png"></a>
+                            <a href="#projects_Boorish"><img src="static/projects/boorish.png"></a>
+                            <a href="#projects_Flingblade"><img src="static/projects/knight.png"></a>
+                            <a href="#projects_Runner"><img src="static/projects/runner.png"></a>
+                        </header>
+
+                        <div class="project-item column-container" id="color-anchor">
+                            <div>
+                                <h2 id="projects_Anchor">Anchor Game (Working Title)</h2>
+                                <h3><a href=https://shanjiang8080.itch.io/anchor-game target="_blank">Link to Demo</a></h3>
+                                <p>This is a 2D precision platformer I'm currently developing, with the central mechanic being the anchor and how it can be used in various ways, like as a grappling hook or to propel yourself upward.
+                                    It is made using the <a href="https://monogame.net" target="_blank">MonoGame</a> framework in C#, and I am also using an extra framework called <a href=https://github.com/prime31/Nez target="_blank">Nez</a> to help with aspects like objects and scene management.
+                                </p>
+                            </div>
+                            <img src="static/screenshots/anchorgame.png">
+                        </div>
+                        <div class="project-item column-container" id="color-collectalogger">
+                            <div>
+                                <h2 id="projects_Collectalogger">Collectalogger</h2>
+                                <h3><a href=https://github.com/shanjiang8080/Collectalogger target="_blank">GitHub Link</a></h3>
+                                <p>
+                                    This is an Android app I'm developing that allows the user to sign into various digital games libraries like Steam, Epic Games, and GOG to 'collect' their libraries into one place, using the IGDB API.
+                                    It uses Kotlin and Jetpack Compose.
+                                </p>
+                            </div>
+                            <img class="smooth-rendering" src="static/screenshots/collectalogger.png"> <!--TODO get an image for this that is better... -->
+                        </div>
+                        <div class="project-item column-container" id="color-boorish">
+                            <div>
+                                <h2 id="projects_Boorish">Boorish</h2>
+                                <h3><a href=https://github.com/shanjiang8080/boorish target="_blank">GitHub Link</a></h3>
+                                <p>
+                                    This is an image gallery web app service similar to a booru, where users can browse images and filter based on tags. 
+                                    If logged in, users can add images and tags. 
+                                    This web app was made using Django in Python.
+                                </p>
+                            </div>
+                            <img class="smooth-rendering" src="static/screenshots/boorish.png"> <!--TODO get an image for this that is better... -->
+                        </div>
+                        <div class="project-item column-container" id="color-flingblade">
+                            <div>
+                                <h2 id="projects_Flingblade">Flingblade</h2>
+                                <h3><a href=https://shanjiang8080.itch.io/flingblade target="_blank">Itch.io Link</a></h3>
+                                <p>
+                                    This was made in around a month as part of a group project in Unity. It is a platformer game where the central mechanic is swinging and flinging a sword around, platforming with it, and recalling it.
+                                    I handled the bulk of the programming work, including the movement and sword code. I was also responsible for much of the art, including the main character, sword, and tileset.
+                                </p>
+                            </div>
+                            <img class="smooth-rendering" src="static/screenshots/flingblade.png"> <!--TODO get an image for this that is better... -->
+
+                        </div>
+                        <div class="project-item column-container" id="color-runner">
+                            <div>
+                                <h2 id="projects_Runner">Endless Runner</h2>
+                                <h3><a href=https://github.com/shanjiang8080/endless-runner target="_blank">GitHub Link</a></h3>
+                                <p>
+                                    This was made in around a month as my final project for my 12th grade Computer Science class. 
+                                    I used the LibGDX framework to make a simple 2D endless runner game. 
+                                    In addition to programming the game, I also made all the art assets (except for the font).
+                                </p>
+                            </div>
+                            <img class="smooth-rendering" src="static/screenshots/runner.png"> <!--TODO get an image for this that is better... -->
+                        </div>
+                    </section>
                 </div>
             </div>
         </article>
@@ -188,7 +301,11 @@
             </div>
             <div class="window-bottom">
                 <div class="window-inner">
-                    <p>Link to my github and or my linkedIn. Not my website though!</p>
+                    <header class="project-icon-holder">
+                        <a href="https://github.com/shanjiang8080"><img src="static/github.png"></a>
+                        <a href="https://www.linkedin.com/in/shan-jiang-3130562b9/"><img src="static/linkedin.png"></a>
+                        </header>
+
                 </div>
             </div>
         </article>
